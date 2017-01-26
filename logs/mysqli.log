@@ -1,0 +1,95 @@
+Date: 2017-01-02 20:29:50
+query: SELE CT * FROM `comments` ORDER BY `id`
+File: D:\Wamp\wamp64\www\new\controlers\404\404.php
+line: 3
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELE CT * FROM `comments` ORDER BY `id`' at line 1
+
+Date: 2017-01-02 21:00:17
+query: SELECT * FROM `news` WHERE `id` =15LIMIT 1
+File: D:\Wamp\wamp64\www\new\controlers\news\edit.php
+line: 3
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+
+Date: 2017-01-02 21:01:12
+query: SELECT * FROM `news` WHERE `id` =15LIMIT 1
+File: D:\Wamp\wamp64\www\new\controlers\news\edit.php
+line: 3
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+
+Date: 2017-01-26 10:29:14
+query: SELECCT * FROM `comments` ORDER BY `id`
+File: D:\Wamp\wamp64\www\new\controlers\404\404.php
+line: 66
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECCT * FROM `comments` ORDER BY `id`' at line 1
+
+Date: 2017-01-26 15:36:19
+query: INSERT INTO `registration` SET
+			`login`='login',
+			`password`='DSA/ZvmwqYjOQ',
+			`email`='email@mail.ru',
+			`activate_hash` =DSwuQtH/ff1cM
+			
+File: D:\Wamp\wamp64\www\new\controlers\main\main.php
+line: 22
+Error: Unknown column 'DSwuQtH' in 'field list'
+
+Date: 2017-01-26 15:58:53
+query: 
+			UPDATE `goods` SET
+			`activate` = 1
+			WHERE `activate_hash`=DSwuQtH/ff1cM 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate_hash' in 'where clause'
+
+Date: 2017-01-26 15:59:31
+query: 
+			UPDATE `goods` SET
+			`activate` = 1
+			WHERE `activate_hash`='DSwuQtH/ff1cM' 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate_hash' in 'where clause'
+
+Date: 2017-01-26 15:59:32
+query: 
+			UPDATE `goods` SET
+			`activate` = 1
+			WHERE `activate_hash`='DSwuQtH/ff1cM' 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate_hash' in 'where clause'
+
+Date: 2017-01-26 15:59:33
+query: 
+			UPDATE `goods` SET
+			`activate` = 1
+			WHERE `activate_hash`='DSwuQtH/ff1cM' 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate_hash' in 'where clause'
+
+Date: 2017-01-26 15:59:46
+query: 
+			UPDATE `goods` SET
+			`activate` = 1
+			WHERE `activate_hash`='DSwuQtH/ff1cM' 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate_hash' in 'where clause'
+
+Date: 2017-01-26 16:01:03
+query: 
+			UPDATE `registration` SET
+			`activate` = 1
+			WHERE `activate_hash`='DSwuQtH/ff1cM' 
+		
+File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
+line: 7
+Error: Unknown column 'activate' in 'field list'
+
