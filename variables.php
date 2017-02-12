@@ -152,6 +152,17 @@ if(isset($_GET['module'])){
 				$_GET['page']=$_GET['module'];
 			}
 			break;
+		case 'cab':
+			$page = array('registration','activate','auth','exit');
+			if(isset($_GET['page'])){
+				if (!in_array($_GET['page'], $page)) {
+					$_GET['module']=$_GET['page']='404';
+				}
+			}else{
+				$_GET['page']=$_GET['module'];
+			}
+			break;
+
 		default:
 			$_GET['module']=$_GET['page']='404';
 			echo 'error';

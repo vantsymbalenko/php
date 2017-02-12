@@ -1,3 +1,4 @@
+<div class="info" style="height:80px;"></div>
 <?php
 if (isset($_SESSION['info'])) {
 	?>

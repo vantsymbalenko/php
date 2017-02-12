@@ -93,3 +93,13 @@ File: D:\Wamp\wamp64\www\new\controlers\main\activate.php
 line: 7
 Error: Unknown column 'activate' in 'field list'
 
+Date: 2017-02-12 21:25:43
+query: SELECT * FROM `registration`
+			WHERE `id`='40''
+			LIMIT 1
+			
+File: D:\Wamp\wamp64\www\new\controlers\allpages.php
+line: 6
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''40''
+			LIMIT 1' at line 2
+

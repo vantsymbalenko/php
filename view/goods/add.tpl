@@ -1,3 +1,4 @@
+<div class="info" style="height:80px;"></div>
 <div class="add_goods1">
 	<form action="" method="POST">
 		Title:

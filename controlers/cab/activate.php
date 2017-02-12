@@ -1,3 +1,4 @@
+<div style="height:100px;"></div>
 <?php
 	if (isset($_GET['probe'],$_GET['hash'],$_GET['id'])) {
 		query("
@@ -10,9 +11,9 @@
 		exit();
 		
 	}else{
-				echo 'For activate you account please follow[][][][][[[]]] link<br>';
+				echo 'For activate you account please follow link<br>';
 ?>
-	<a href="index.php?module=main&page=activate&id=<?php echo $_GET['id']; ?>&hash=<?php echo $_GET['hash'];?>&probe=1">Submit</a>
+	<a href="index.php?module=cab&page=activate&id=<?php echo $_GET['id']; ?>&hash=<?php echo $_GET['hash'];?>&probe=1">Submit</a>
 
 <?php
 

@@ -1,7 +1,7 @@
 <?php
 $res=query("SELECT * FROM `comments` ORDER BY `date` desc");
 
-if (isset($_POST['message'],$_POST['name'],$_POST['email'])){
+if (isset($_POST['message'])){
 	
 	$_POST=trim_all($_POST);
 	
@@ -10,9 +10,7 @@ if (isset($_POST['message'],$_POST['name'],$_POST['email'])){
 			$error[$key]='This field is empty';
 		}
 	}
-	if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-		$error['email']='This field is incorrect';
-	}
+	
 	
 	
 	if(!isset($error)){
@@ -20,8 +18,8 @@ if (isset($_POST['message'],$_POST['name'],$_POST['email'])){
 		query(
 			"INSERT INTO `comments` SET
 			`date`='".date("Y-m-d H:i:s")."',
-			`email` = '".$_POST['email']."',
-			`name` = '".$_POST['name']."',
+			`email` = '".$_SESSION['user']['email']."',
+			`name` = '".$_SESSION['user']['login']."',
 			`comment`='".$_POST['message']."'"
 			);	
 		$_SESSION['comment_ok']='ok';

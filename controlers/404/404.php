@@ -1,5 +1,31 @@
+<div style="height:100px;"></div>
 <?php
-echo '404.php<br>';/*
+echo '404.php<br>';
+
+e_print_r($_COOKIE);
+if(file_exists("controlers/404/405.php")){
+	echo "yes";
+}else{
+	echo "no";
+}
+e_print_r($_SESSION['user']);
+// $str="sms";
+// $str=md5($str);
+// for ($a=32; $a <127; $a++) { 
+//  	for ($b=32; $b <127; $b++) { 
+// 		for ($c=32; $c <127; $c++) { 
+// 			if(md5(chr($a).chr($b).chr($c))==$str){
+// 					echo chr($a).chr($b).chr($c);
+ 			
+//  			}
+//  		}
+//  	}
+// }
+
+
+
+
+/*
 $res=query("SELECT * FROM `comments` ORDER BY `id`");
 if(mysqli_num_rows($res)){
 	while($row=mysqli_fetch_assoc($res)){
@@ -97,7 +123,7 @@ class Test
 // $t1->x = 3;
 // $t2->x2 = 3;
 // echo ($t1->x + $t2->x);
-$hash= crypt('some');
+
 echo '<br>';
 echo md5('some');
 ?>

@@ -1,3 +1,4 @@
+<div style="height:80px;"></div>
 <?php
 
 
@@ -28,16 +29,12 @@ if(mysqli_num_rows($res)){
 		}
 	
 }
+if(isset($_SESSION['user'])){
 ?>
 
 <div class="feedback">
 	<form action="" method="POST">
-		<div class="else">
-			Enter name:<input type="text" name="name" value="<?php echo @htmlspecialchars($_POST['name']);?>"> <?php echo @$error['name']; ?>
-		</div>
-		<div class="else">
-			Enter email:<input type="email" name="email" value="<?php echo @htmlspecialchars($_POST['email']);?>"> <?php echo @$error['email']; ?>
-		</div>
+		
 		<div class="else">
 		Message:
 		<br>
@@ -51,3 +48,6 @@ if(mysqli_num_rows($res)){
 	</form>
 </div>
 </div>
+<?php
+}
+?>
