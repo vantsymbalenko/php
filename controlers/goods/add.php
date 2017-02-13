@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION['user']) || $_SESSION['user']['access']!=2) {
+	header("Location: /new/404/404");
+	exit();
+}	
 	if (isset($_POST['title'],$_POST['description'],$_POST['category'])) {
 		
 		$_POST=trim_all($_POST);
@@ -20,7 +24,7 @@
 				");
 
 			$_SESSION['info'] = 'Goods was saccesfully added';
-			header('Location: index.php?module=goods&page=goods');
+			header('Location: /new/goods/goods');
 			exit();
 		}
 	}

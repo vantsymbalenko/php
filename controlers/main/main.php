@@ -1,5 +1,9 @@
 <?php
  
+Core::$META['title']="Main.php";
+Core::$CSS[]='<link rel="stylesheet" href="/new/css/css.css">';
+
+
 
 if (isset($_POST['login'],$_POST['password'],$_POST['email'])){
 	
@@ -47,7 +51,7 @@ if (isset($_POST['login'],$_POST['password'],$_POST['email'])){
 			");
 		$_SESSION['regok']='ok';
 		$id = mysqli_insert_id($link);
-		header("Location: index.php?module=main&page=activate&id=".$id."&hash=".myhash($_POST['login'].$_POST['email']));
+		header("Location: /new/main/activate?id=".$id."&hash=".myhash($_POST['login'].$_POST['email']));
 		exit();
 	}
 }

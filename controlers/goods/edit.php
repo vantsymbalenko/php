@@ -3,7 +3,7 @@
 
 	if (!mysqli_num_rows($res)){
 		$_SESSION['info'] = 'This good is doesnt exist';
-		header('Location: index.php?module=goods&page=goods');
+		header('Location:/new/goods/goods');
 		exit();
 	}else{
 
@@ -36,7 +36,7 @@
 				");
 			
 			$_SESSION['info'] = 'Goods was saccesfully edited';
-			header('Location: index.php?module=goods&page=goods');
+			header('Location: /new/goods/goods');
 			exit();
 		}
 	}

@@ -8,10 +8,12 @@ if (isset($_SESSION['info'])) {
 <?php
 	unset($_SESSION['info']);
 }
+if(isset($_SESSION['user']) && $_SESSION['user']['access']==2){
 ?>
-	<div class="add_goods"><a href="index.php?module=goods&page=add"><div class = "plus">+</div>Add new good</a></div>
+	<div class="add_goods"><a href="/new/goods/add"><div class = "plus">+</div>Add new good</a></div>
 	<br>
 <?php
+}
 if(mysqli_num_rows($res)){
 	echo '<div class="goods"><form action="" method="POST">';
 		while ($row=mysqli_fetch_assoc($res)) {
@@ -20,8 +22,8 @@ if(mysqli_num_rows($res)){
 			<div class="good">
 				<div class="checkbox">
 					<input type="checkbox" name="checkbox[]" value="<?php echo htmlspecialchars($row['id']); ?>">
-					<a href="index.php?module=goods&page=edit&id=<?php echo $row['id']; ?>">Edit</a>
-					<a href="index.php?module=goods&page=goods&action=delete&id=<?php echo (int)$row['id']; ?>">DELETE</a>
+					<a href="/new/goods/edit?id=<?php echo $row['id']; ?>">Edit</a>
+					<a href="/new/goods/goods?action=delete&id=<?php echo (int)$row['id']; ?>">DELETE</a>
 				</div>
 				<div class="edit_delete"></div>
 				<div class="title"><?php echo $row['title']; ?></div>

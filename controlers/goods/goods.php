@@ -1,4 +1,5 @@
 <?php
+	Core::$CSS[]='<link rel="stylesheet" href="/new/css/css.css">';
 	$res=query("SELECT * FROM `goods` ORDER BY `date` DESC");
 
 
@@ -7,7 +8,7 @@
 		query("DELETE FROM `goods` WHERE `id` = '".int_all($_GET['id'])."'");
 
 		$_SESSION['info'] = 'goods was delete';
-		header("Location: index.php?module=goods&page=goods");
+		header("Location: /new/goods/goods");
 		exit();
 	}
 
@@ -21,7 +22,7 @@
 	query("DELETE FROM `goods` WHERE `id` IN (".$ids.")");
 
 	$_SESSION['info'] = 'Goods was saccesfully deleted';
-	header('Location: index.php?module=goods&page=goods');
+	header('Location: /new/goods/goods');
 	exit();
 	}
 ?>

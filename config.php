@@ -8,5 +8,8 @@
  	static $DB_HOST ='localhost';
  	static $DB_PASS ='';
  	static $DB_NAME = 'reg'; 
+ 	static $JS      = array();
+ 	static $CSS     = array();
+ 	static $META	=array('title'=>"My site");
  	
  }

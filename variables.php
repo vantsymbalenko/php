@@ -1,4 +1,21 @@
 <?php
+
+if(isset($_GET['route'])){
+	$temp=explode('/', $_GET['route']);
+	foreach ($temp as $key => $value) {
+		if($key==0){
+			$_GET['module']=$value;
+		}
+		if($key==1){
+			$_GET['page']=$value;
+		}
+
+	}
+	unset($_GET['route']);
+}
+
+
+
 /*function for 	query to BD and create logs when was error */
 function query($query){
 	global $link;

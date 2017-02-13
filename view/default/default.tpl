@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php echo $_GET['page'];?></title>
-	<link rel="stylesheet" type="text/css" href="css/css.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<title><?php echo Core::$META['title'];?></title>
+	
+	<link rel="stylesheet" type="text/css" href="/new/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/new/css/bootstrap-theme.css">
+	<?php if(count(Core::$CSS)) {echo implode("\n",Core::$CSS);} ?>
 
 </head>
 <body>
@@ -26,22 +27,22 @@
 		</div>
 		<div class="collapse navbar-collapse" id="menu">
 			<ul class="nav navbar-nav">
-				<li><a href="index.php?module=404&page=404">404</a></li>
-				<li><a href="index.php?module=main&page=main">Main</a></li>
-				<li><a href="index.php?module=back&page=back">Feedback</a></li>
+				<li><a href="/new/404/404">404</a></li>
+				<li><a href="/new/main/main">Main</a></li>
+				<li><a href="/new/back/back">Feedback</a></li>
 				<li class="dropdown">
 				<a href="" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="index.php?module=news&page=news">News</a></li>
-						<li><a href="index.php?module=goods&page=goods">Goods</a></li>
+						<li><a href="/new/news/news">News</a></li>
+						<li><a href="/new/goods/goods">Goods</a></li>
 					</ul>
 				</li>
 				<?php if(!isset($_SESSION['user'])){
 				?>
-				<li><a href="index.php?module=cab&page=registration">Registration</a></li>
-				<li><a href="index.php?module=cab&page=auth">Authorization</a></li>
+				<li><a href="/new/cab/registration">Registration</a></li>
+				<li><a href="/new/cab/auth">Authorization</a></li>
 				<?php }else{ ?>
-				<li><a href="index.php?module=cab&page=exit">Exit</a></li>
+				<li><a href="/new/cab/exit">Exit</a></li>
 				<?php
 				}
 				?>
@@ -69,6 +70,6 @@
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
+    <script src="/new/js/bootstrap.js"></script>
 </body>
 </html>

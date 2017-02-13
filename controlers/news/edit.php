@@ -4,7 +4,7 @@
 	
 	if(!mysqli_num_rows($res)){
 		$_SESSION['info']='news with this "id" is doesn\'t exist';
-		header("Location: index.php?module=news&page=news");
+		header("Location: /new/news/news");
 		exit();
 	}else{
 		$row = mysqli_fetch_assoc($res);	
@@ -39,7 +39,7 @@ if(isset($_POST['edit'],$_POST['title'],$_POST['text'],$_POST['description'],$_P
 		WHERE `id`=".(int)$_GET['id']."
 		");
 	$_SESSION['info']='news was successfully edited';
-	header("Location: index.php?module=news&page=news");
+	header("Location: /new/news/news");
 	exit();
 	}
 }

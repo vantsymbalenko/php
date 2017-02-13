@@ -18,7 +18,7 @@ if(mysqli_num_rows($res)){
 				?>
 			<hr>
 			<div class="title"><b><?php echo $row['title'];?></b></div>
-			<div class="delete"><input type="checkbox" name="ids[]" value="<?php echo htmlspecialchars($row['id']); ?>"><a href="index.php?module=news&page=news&action=delete&id=<?php echo $row['id'];?>">DELETE</a>  <a href="index.php?module=news&page=edit&id=<?php echo $row['id'];?>">Edit</a></div>
+			<div class="delete"><input type="checkbox" name="ids[]" value="<?php echo htmlspecialchars($row['id']); ?>"><a href="/new/news/news?action=delete&id=<?php echo $row['id'];?>">DELETE</a>  <a href="/new/news/edit?id=<?php echo $row['id'];?>">Edit</a></div>
 			<div><?php echo $row['description'];?></div>
 			<div class="category"><?php echo $row['category'];?></div>
 			<div class="date"><?php echo $row['date'];?></div>

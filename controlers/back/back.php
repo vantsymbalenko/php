@@ -1,4 +1,5 @@
 <?php
+Core::$CSS[]='<link rel="stylesheet" href="/new/css/css.css">';
 $res=query("SELECT * FROM `comments` ORDER BY `date` desc");
 
 if (isset($_POST['message'])){
@@ -23,7 +24,7 @@ if (isset($_POST['message'])){
 			`comment`='".$_POST['message']."'"
 			);	
 		$_SESSION['comment_ok']='ok';
-		header('Location: index.php?module=back');
+		header('Location: /new/back');
 		exit();
 	}
 }

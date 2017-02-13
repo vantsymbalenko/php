@@ -1,5 +1,5 @@
 <?php
-
+	Core::$CSS[]='<link rel="stylesheet" href="/new/css/css.css">';
  /* this part of code detele several news */
 
 	if (isset($_POST['ids'],$_POST['delete'])) {
@@ -11,7 +11,7 @@
 		query("DELETE FROM `news` WHERE `id` IN (".$ids.")");
 
 		$_SESSION['info']='NEWS was succesfully delete';
-		header("Location: index.php?module=news&page=news");
+		header("Location: /new/news/news");
 		exit();
 	}
 	
@@ -26,7 +26,7 @@
 		query("DELETE FROM `news` WHERE `id`='".(int)$_GET['id']."'");
 
 		$_SESSION['info']='NEWS was succesfully delete';
-		header("Location: index.php?module=news&page=news");
+		header("Location: /new/news/news");
 		exit();
 	}
 

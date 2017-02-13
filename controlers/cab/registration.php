@@ -1,6 +1,6 @@
 <?php
  if(isset($_SESSION['user'])){
-	header("Location: index.php?module=404&page=404");
+	header("Location: /new/404/404");
 }
 
 if (isset($_POST['login'],$_POST['password'],$_POST['email'])){
@@ -49,7 +49,7 @@ if (isset($_POST['login'],$_POST['password'],$_POST['email'])){
 			");
 		$_SESSION['regok']='ok';
 		$id = mysqli_insert_id($link);
-		header("Location: index.php?module=cab&page=activate&id=".$id."&hash=".myhash($_POST['login'].$_POST['email']));
+		header("Location: /new/cab/activate&id=".$id."&hash=".myhash($_POST['login'].$_POST['email']));
 		exit();
 	}
 }

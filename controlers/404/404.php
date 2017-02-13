@@ -2,17 +2,20 @@
 <?php
 echo '404.php<br>';
 
+
+
+e_print_r($_GET);
 e_print_r($_COOKIE);
-if(file_exists("controlers/404/405.php")){
-	echo "yes";
-}else{
-	echo "no";
-}
-e_print_r($_SESSION['user']);
+
+
+$res=query("SELECT * FROM `registration`
+	WHERE `id` =15
+	LIMIT 1
+	");
+e_print_r($res);
 // $str="sms";
 // $str=md5($str);
 // for ($a=32; $a <127; $a++) { 
-//  	for ($b=32; $b <127; $b++) { 
 // 		for ($c=32; $c <127; $c++) { 
 // 			if(md5(chr($a).chr($b).chr($c))==$str){
 // 					echo chr($a).chr($b).chr($c);

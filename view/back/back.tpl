@@ -1,4 +1,5 @@
 <div style="height:80px;"></div>
+
 <?php
 
 
@@ -8,13 +9,16 @@ if(mysqli_num_rows($res)){
 	if(isset($_SESSION['comment_ok'])){
 	unset($_SESSION['comment_ok']);
 
+
 ?>	
 	<div class="comment_ok">Comment was left</div>
 
 <?php
 	}
+	
 	while($row=mysqli_fetch_assoc($res)){
 	$row=htmlspecialchars_all($row);
+
 	?>
 	<div class="view_feedback">
 		<div class="name"><?php echo $row['name'];?></div>
@@ -49,5 +53,7 @@ if(isset($_SESSION['user'])){
 </div>
 </div>
 <?php
-}
+}else{
 ?>
+<h2 align="center">To leave comment please log in</h2>
+<?php } ?>

@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION['user']) || $_SESSION['user']['access']!=2) {
+	header("Location: /new/404/404");
+	exit();
+}
 /*  add new news */
 if (isset($_POST['submit'],$_POST['title'],$_POST['text'],$_POST['category'],$_POST['description'])) {
 
@@ -21,7 +25,7 @@ if (isset($_POST['submit'],$_POST['title'],$_POST['text'],$_POST['category'],$_P
 		`date`=NOW()
 		");
 	$_SESSION['info']='news was successfully added';
-	header("Location: index.php?module=news&page=news");
+	header("Location: /new/news/news");
 	exit();
 	}
 }

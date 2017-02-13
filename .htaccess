@@ -1,0 +1,18 @@
+
+php_flag display_error ON
+php_value mbstring.internal_encoding UTF-8
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off
+
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/forum
+RewriteCond %{REQUEST_URI} !^/ckeditor
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
