@@ -3,6 +3,24 @@
 echo '404.php<br>';
 
 
+$text='wwefe';
+if(!$text){
+	echo 'all is allright';
+	exit();
+}
+
+preg_match_all('#^(.+)#u', $text, $matches);
+
+e_print_r($matches);
+echo preg_replace('#^.+#u', 'http://'.$matches[0][0], $text);
+
+
+
+
+
+
+var_dump(file_exists('controlers/default/back'));
+var_dump(is_dir('controlers/default/back'));
 
 e_print_r($_GET);
 e_print_r($_COOKIE);

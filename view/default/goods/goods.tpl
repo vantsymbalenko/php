@@ -8,12 +8,12 @@ if (isset($_SESSION['info'])) {
 <?php
 	unset($_SESSION['info']);
 }
-if(isset($_SESSION['user']) && $_SESSION['user']['access']==2){
+
 ?>
 	<div class="add_goods"><a href="/new/goods/add"><div class = "plus">+</div>Add new good</a></div>
 	<br>
 <?php
-}
+
 if(mysqli_num_rows($res)){
 	echo '<div class="goods"><form action="" method="POST">';
 		while ($row=mysqli_fetch_assoc($res)) {

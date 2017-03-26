@@ -1,4 +1,4 @@
-<a href="index.php?module=news&page=add">Add new news</a>
+<a href="/new/news/add">Add new news</a>
 
 <?php
 if(isset($_SESSION['info'])){

@@ -1,18 +1,42 @@
+<div style="height:100px;"></div>
 <?php
 
 if(isset($_GET['route'])){
+	
 	$temp=explode('/', $_GET['route']);
+	if ($temp[0]=='admin') {
+		Core::$SKIN='admin';
+		unset($temp[0]);
+	}
+	$i=0;
 	foreach ($temp as $key => $value) {
-		if($key==0){
+		if($i==0 && !empty($temp[$key])){
 			$_GET['module']=$value;
 		}
-		if($key==1){
+		if($i==1 && !empty($temp[$key])){
 			$_GET['page']=$value;
 		}
+		$i++;
 
 	}
-	unset($_GET['route']);
 }
+	if(isset($_GET['page'])){
+		
+		if (!file_exists('controlers/'.Core::$SKIN.'/'.$_GET['module'].'/'.$_GET['page'].'.php')) {
+			$_GET['page']=$_GET['module']='404';
+		}
+	}elseif(isset($_GET['module'])){
+		
+		if (!file_exists('controlers/'.Core::$SKIN.'/'.$_GET['module'])) {
+			$_GET['page']=$_GET['module']='404';
+		}else{
+			$_GET['page']=$_GET['module'];	
+		}
+	}else{
+		
+		$_GET['module']=$_GET['page']='main';
+	}
+	unset($_GET['route']);
 
 
 
@@ -67,7 +91,7 @@ function float_all($array){
 
 /*function for */
 function e_print_r($array){
-	echo '<pre>'.print_r($array,1).'</pre>';
+	echo '<pre>'.print_r(htmlspecialchars_all($array),1).'</pre>';
 }
 
 /* function for correct ... all string from DB */
@@ -115,8 +139,7 @@ function __autoload($Class){
 
 
 
-
-/*  */
+/*  
 if(isset($_GET['module'])){
 	switch ($_GET['module']) {
 		case 'main':
@@ -187,5 +210,5 @@ if(isset($_GET['module'])){
 	}
 }else{
 	$_GET['module']=$_GET['page']='main';
-}
+}*/
 ?>

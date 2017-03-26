@@ -1,8 +1,5 @@
 <?php
-if (!isset($_SESSION['user']) || $_SESSION['user']['access']!=2) {
-	header("Location: /new/404/404");
-	exit();
-}	
+
 	if (isset($_POST['title'],$_POST['description'],$_POST['category'])) {
 		
 		$_POST=trim_all($_POST);

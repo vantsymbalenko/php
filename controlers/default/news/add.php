@@ -1,8 +1,8 @@
 <?php
-if (!isset($_SESSION['user']) || $_SESSION['user']['access']!=2) {
-	header("Location: /new/404/404");
-	exit();
-}
+// if (!isset($_SESSION['user']) || $_SESSION['user']['access']!=2) {
+// 	header("Location: /new/404/404");
+// 	exit();
+// }
 /*  add new news */
 if (isset($_POST['submit'],$_POST['title'],$_POST['text'],$_POST['category'],$_POST['description'])) {
 

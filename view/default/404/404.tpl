@@ -1,0 +1,2 @@
+404.tpl<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolor dicta laudantium vel eligendi. Fugit voluptatem, minima quis accusantium velit deleniti, repellendus odit suscipit esse id iste soluta totam est.

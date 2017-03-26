@@ -10,10 +10,10 @@ mysqli_set_charset($link,'utf8');
 
 
 
-include 'controlers/'.$_GET['module'].'/'.$_GET['page'].'.php';
+include 'controlers/'.Core::$SKIN.'/'.$_GET['module'].'/'.$_GET['page'].'.php';
 
-include 'controlers/allpages.php';	
+include 'controlers/'.Core::$SKIN.'/allpages.php';	
 
-include 'view/default/default.tpl';
+include 'view/'.Core::$SKIN.'/default.tpl';
 
 ?>

@@ -1,5 +1,6 @@
 <?php
 Core::$CSS[]='<link rel="stylesheet" href="/new/css/css.css">';
+
 $res=query("SELECT * FROM `comments` ORDER BY `date` desc");
 
 if (isset($_POST['message'])){

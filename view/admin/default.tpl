@@ -23,41 +23,24 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="/new/main/main" class="navbar-brand">Logo for my site</a>
+			<a href="/new/admin/main/main" class="navbar-brand">Admin Panel</a>
 		</div>
 		<div class="collapse navbar-collapse" id="menu">
 			<ul class="nav navbar-nav">
-				<li><a href="/new/404/404">404</a></li>
-				<li><a href="/new/main/main">Main</a></li>
-				<li><a href="/new/back/back">Feedback</a></li>
-				<li class="dropdown">
-				<a href="" class="dropdown-toggle" data-toggle="dropdown">Regs <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="/new/regs/task1">Task1</a></li>
-						<li><a href="/new/regs/task2">Task2</a></li>
-						<li><a href="/new/regs/task3">Task3</a></li>
-						<li><a href="/new/regs/task4">Task4</a></li>
-						<li><a href="/new/regs/task5">Task5</a></li>
-						<li><a href="/new/regs/task6">Task6</a></li>
-						<li><a href="/new/regs/task7">Task7</a></li>
-						<li><a href="/new/regs/task8">Task8</a></li>
-						<li><a href="/new/regs/task9">Task9</a></li>
-						<li><a href="/new/regs/task10">Task10</a></li>
-						<li><a href="/new/regs/task11">Task11</a></li>
-					</ul>
-				</li>
+				<li><a href="/new/404/404">Back to site</a></li>
+			
 				<li class="dropdown">
 				<a href="" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="/new/news/news">News</a></li>
 						<li><a href="/new/goods/goods">Goods</a></li>
+						<li><a href="/new/admin">Admin</a></li>
 					</ul>
 				</li>
 				<?php if(!isset($_SESSION['user'])){
 				?>
 				<li><a href="/new/cab/registration">Registration</a></li>
 				<li><a href="/new/cab/auth">Authorization</a></li>
-				<li><a href="/new/admin/">Admin</a></li>
 				<?php }else{ ?>
 				<li><a href="/new/cab/exit">Exit</a></li>
 				<?php
